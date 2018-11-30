@@ -127,7 +127,7 @@ var ary = [9,1,2,3,4];
 console.log(m);
 
 ary = [2,1,4,6,3,8,12];
-for(var i = 1; i < ary.length; i++) {
+for(var i = 0; i < ary.length; i++) {
   var swap = false;
   for(j = i; j < ary.length; j++) {
     if(ary[j] > ary[j+1]) {
