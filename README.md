@@ -107,11 +107,30 @@ Ajax({
 
 
 var ary = [9,1,2,3,4];
-var m = 0;
-for (var i = ary.length - 1; i > 0; i--) {
+  var m = 0;
+  for (var i = ary.length - 1; i > 0; i--) {
+   var swap = false;
+   for (var j = 0; j < i; j++) {
+      if (ary[j] > ary[j+1]) {
+        var temp = ary[j];
+        ary[j] = ary[j+1];
+        ary[j+1] = temp;
+        swap = true;
+     }
+   }
+   if(!swap) {
+      break;
+   }
+   m++;
+}
+
+console.log(m);
+
+ary = [2,1,4,6,3,8,12];
+for(var i = 1; i < ary.length; i++) {
   var swap = false;
-  for (var j = 0; j < i; j++) {
-    if (ary[j] > ary[j+1]) {
+  for(j = i; j < ary.length; j++) {
+    if(ary[j] > ary[j+1]) {
       var temp = ary[j];
       ary[j] = ary[j+1];
       ary[j+1] = temp;
@@ -121,10 +140,8 @@ for (var i = ary.length - 1; i > 0; i--) {
   if(!swap) {
     break;
   }
-  m++;
 }
-
-console.log(m);
+console.log(ary);
 
 // 快速排序
 
