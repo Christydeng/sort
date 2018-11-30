@@ -1,5 +1,8 @@
 # sort
 排序
+
+// ajax
+
 function Ajax(options) {
   // 新建一个对象，用途接受XHR对象
   var xhr = null;
@@ -100,6 +103,9 @@ Ajax({
   }
 })
 
+// 冒泡排序
+
+
 var ary = [9,1,2,3,4];
 var m = 0;
 for (var i = ary.length - 1; i > 0; i--) {
@@ -119,6 +125,8 @@ for (var i = ary.length - 1; i > 0; i--) {
 }
 
 console.log(m);
+
+// 快速排序
 
 function quickSort(arr){
     if(arr.length <= 1){
